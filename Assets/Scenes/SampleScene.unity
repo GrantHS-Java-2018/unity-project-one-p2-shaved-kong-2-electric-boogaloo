@@ -565,7 +565,7 @@ GameObject:
   m_Layer: 0
   m_Name: Waypoint (2)
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 7148428337604731935, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -719,7 +719,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 559123271}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 8.71, y: -3.0515, z: -0.0023823}
+  m_LocalPosition: {x: 8.59, y: -3.05, z: -0.0023823}
   m_LocalScale: {x: 0.9441562, y: 1.0071, z: 1.0071}
   m_Children: []
   m_Father: {fileID: 1861076360}
@@ -1484,7 +1484,7 @@ Transform:
   m_Children:
   - {fileID: 214705778}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1948884631
 GameObject:
