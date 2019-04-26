@@ -29,9 +29,8 @@ public class Dice : MonoBehaviour
         int randomDiceSides = 0;
         for (int i = 0; i <= 20; i++)
         {
-            randomDiceSides = Random.Range(0, 5);
+            randomDiceSides = Random.Range(0, 6);
             rend.sprite = diceSides[randomDiceSides];
-            
             yield return new WaitForSeconds(0.05f);
                 
 
