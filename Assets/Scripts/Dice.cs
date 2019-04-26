@@ -25,9 +25,8 @@ public class Dice : MonoBehaviour
     private IEnumerator RollTheDice()
     {
         coroutineAllowed = false;
-       
+
         int randomDiceSides = 0;
-        int finalSide = 0;
         for (int i = 0; i <= 20; i++)
         {
             randomDiceSides = Random.Range(0, 5);
@@ -46,9 +45,8 @@ public class Dice : MonoBehaviour
         {
             GameControl.MovePlayer(2);
         }
-
+        
         whosTurn *= -1;
-        finalSide = randomDiceSides + 1;
-           
+        coroutineAllowed = true;
     }
 }
