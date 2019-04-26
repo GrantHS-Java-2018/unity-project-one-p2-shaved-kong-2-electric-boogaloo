@@ -6,44 +6,59 @@ using UnityEngine;
 public class Dice : MonoBehaviour
 {
     
-    private Sprite[] _diceSides;
+    private Sprite[] diceSides;
 
-    private SpriteRenderer _rend;
+    private SpriteRenderer rend;
+
+    private int whosTurn = 1;
+
+    private bool coroutineAllowed = true;
 
     // Start is called before the first frame update
     void Start()
     {
 
-        _rend = GetComponent<SpriteRenderer>();
+        rend = GetComponent<SpriteRenderer>();
 
-        _diceSides = Resources.LoadAll<Sprite>("DiceSides/");
+        diceSides = Resources.LoadAll<Sprite>("DiceSides/");
+
+        rend.sprite = diceSides[5];
 
     }
 
     private void OnMouseDown()
     {
+        if(!GameControl.gameOver && coroutineAllowed)
         StartCoroutine("RollTheDice");
     }
 
     private IEnumerator RollTheDice()
     {
+        coroutineAllowed = false;
+       
         var randomDiceSides = 0;
         var finalSide = 0;
-        for (var i = 0; i <= 20; i++)
+        for (int i = 0; i <= 20; i++)
         {
             randomDiceSides = Random.Range(0, 5);
-            _rend.sprite = _diceSides[randomDiceSides];
+            rend.sprite = diceSides[randomDiceSides];
             
             yield return new WaitForSeconds(0.05f);
                 
 
         }
 
+        GameControl.dicesideThrown = randomDiceSides + 1;
+        if (whosTurn == 1)
+        {
+            GameControl.MovePlayer(1);
+        } else if (whosTurn == -1)
+        {
+            GameControl.MovePlayer(2);
+        }
+
+        whosTurn *= -1;
         finalSide = randomDiceSides + 1;
-        
-        
+           
     }
-
-
-
 }
