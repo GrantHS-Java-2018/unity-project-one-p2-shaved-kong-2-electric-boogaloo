@@ -3,49 +3,47 @@ using UnityEngine;
 
 public class Dice : MonoBehaviour
 {
-    private Sprite[] diceSides;
-    private SpriteRenderer rend;
-    private int whosTurn = 1;
-    private bool coroutineAllowed = true;
+    private Sprite[] _diceSides;
+    private SpriteRenderer _rend;
+    private int _whosTurn = 1;
+    private bool _coroutineAllowed = true;
 
     // Start is called before the first frame update
     private void Start()
     {
-        rend = GetComponent<SpriteRenderer>();
-        diceSides = Resources.LoadAll<Sprite>("DiceSides/");
-        rend.sprite = diceSides[5];
+        _rend = GetComponent<SpriteRenderer>();
+        _diceSides = Resources.LoadAll<Sprite>("DiceSides/");
+        _rend.sprite = _diceSides[5];
     }
 
     private void OnMouseDown()
     {
-        if(!GameControl.gameOver && coroutineAllowed)
+        if(!GameControl.gameOver && _coroutineAllowed)
              StartCoroutine("RollTheDice");
     }
 
     private IEnumerator RollTheDice()
     {
-        coroutineAllowed = false;
+        _coroutineAllowed = false;
 
         int randomDiceSides = 0;
         for (int i = 0; i <= 20; i++)
         {
             randomDiceSides = Random.Range(0, 6);
-            rend.sprite = diceSides[randomDiceSides];
+            _rend.sprite = _diceSides[randomDiceSides];
             yield return new WaitForSeconds(0.05f);
-                
-
         }
 
         GameControl.dicesideThrown = randomDiceSides + 1;
-        if (whosTurn == 1)
+        if (_whosTurn == 1)
         {
             GameControl.MovePlayer(1);
-        } else if (whosTurn == -1)
+        } else if (_whosTurn == -1)
         {
             GameControl.MovePlayer(2);
         }
         
-        whosTurn *= -1;
-        coroutineAllowed = true;
+        _whosTurn *= -1;
+        _coroutineAllowed = true;
     }
 }
