@@ -9,7 +9,7 @@ public class GameControl : MonoBehaviour
     private static GameObject whoWinsTextShadow, player1MoveText, player2MoveText;
     private static GameObject player1, player2;
 
-    public static int dicesideThrown = 0;
+    public static int DicesideThrown = 0;
     public static int player1StartWaypoint = 0;
     public static int player2StartWaypoint = 0;
     public static bool gameOver = false;
@@ -17,7 +17,7 @@ public class GameControl : MonoBehaviour
 
 
     // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
 
         whoWinsTextShadow = GameObject.Find("WhoWinsText");
@@ -37,10 +37,10 @@ public class GameControl : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    private void Update()
     {
         if (player1.GetComponent<FollowThePath>().waypointIndex >
-            player1StartWaypoint + dicesideThrown)
+            player1StartWaypoint + DicesideThrown)
         {
             player1.GetComponent<FollowThePath>().moveAllowed = false;
             player1MoveText.gameObject.SetActive(false);
@@ -79,8 +79,7 @@ public class GameControl : MonoBehaviour
             case 2:
                 player2.GetComponent<FollowThePath>().moveAllowed = true;
                 break;
-            
         }
-      }
+    }
     }
 
