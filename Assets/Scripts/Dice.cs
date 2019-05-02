@@ -8,7 +8,6 @@ public class Dice : MonoBehaviour
     private int _whosTurn = 1;
     private bool _coroutineAllowed = true;
     
-    
 
     // Start is called before the first frame update
     private void Start()
