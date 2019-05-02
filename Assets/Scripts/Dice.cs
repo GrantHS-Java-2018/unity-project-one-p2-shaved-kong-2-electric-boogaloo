@@ -14,7 +14,7 @@ public class Dice : MonoBehaviour
     {
         _rend = GetComponent<SpriteRenderer>();
         _diceSides = Resources.LoadAll<Sprite>("DiceSides/");
-        _rend.sprite = _diceSides[5];
+        _rend.sprite = _diceSides[0];
     }
 
     private void OnMouseDown()
