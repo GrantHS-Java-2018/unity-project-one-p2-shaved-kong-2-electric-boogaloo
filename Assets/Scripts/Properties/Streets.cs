@@ -17,8 +17,10 @@ public enum StreetType{
     COMMUNITY_CHEST,
     GO_TO_JAIL,
     JUST_VISITING,
-    UTILITY,
+    ELECTRIC_COMPANY,
+    WATER_WORKS,
     INCOME_TAX,
+    LUXURY_TAX,
     FREE_PARKING
   
 }
