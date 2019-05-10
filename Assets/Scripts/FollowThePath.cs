@@ -18,7 +18,7 @@ public class FollowThePath : MonoBehaviour
     {
         transform.position = waypoints[waypointIndex].transform.position;
     }
-
+ 
     // Update is called once per frame
     private void Update()
     {
