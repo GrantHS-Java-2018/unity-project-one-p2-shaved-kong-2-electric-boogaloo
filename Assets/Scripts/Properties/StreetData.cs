@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+/*
 public class StreetData : MonoBehaviour
 {
 
@@ -69,3 +69,4 @@ public class StreetData : MonoBehaviour
         
     }
 }
+*/
