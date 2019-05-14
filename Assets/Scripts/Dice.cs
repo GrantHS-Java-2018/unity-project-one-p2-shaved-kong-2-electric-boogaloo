@@ -3,10 +3,10 @@ using UnityEngine;
 
 public class Dice : MonoBehaviour
 {
-    private Sprite[] _diceSides = new Sprite[6];
-    private SpriteRenderer _rend;
-    private int _whosTurn = 1;
-    private bool _coroutineAllowed = true;
+    public Sprite[] _diceSides = new Sprite[6];
+    public SpriteRenderer _rend;
+    public int _whosTurn = 1;
+    public bool _coroutineAllowed = true;
     
 
     // Start is called before the first frame update

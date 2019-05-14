@@ -6,8 +6,8 @@ using UnityEngine.Analytics;
 
 public class GameControl : MonoBehaviour
 {
-    private static GameObject whoWinsTextShadow, player1MoveText, player2MoveText;
-    private static GameObject player1, player2;
+    public static GameObject whoWinsTextShadow, player1MoveText, player2MoveText;
+    public static GameObject player1, player2;
 
     public static int DicesideThrown = 0;
     public static int player1StartWaypoint = 0;
@@ -17,7 +17,7 @@ public class GameControl : MonoBehaviour
 
 
     // Start is called before the first frame update
-    private void Start()
+    public void Start()
     {
 
         whoWinsTextShadow = GameObject.Find("WhoWinsText");
@@ -71,14 +71,13 @@ public class GameControl : MonoBehaviour
 
     public static void MovePlayer(int playerToMove)
     {
-        switch (playerToMove)
+        if (playerToMove != 1)
         {
-            case 1:
-                player1.GetComponent<FollowThePath>().moveAllowed = true;
-                break;
-            case 2:
-                player2.GetComponent<FollowThePath>().moveAllowed = true;
-                break;
+            if (playerToMove == 2) player2.GetComponent<FollowThePath>().moveAllowed = true;
+        }
+        else
+        {
+            player1.GetComponent<FollowThePath>().moveAllowed = true;
         }
     }
     }
