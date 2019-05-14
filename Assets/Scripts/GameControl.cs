@@ -55,7 +55,7 @@ public class GameControl : MonoBehaviour
             whoWinsTextShadow.GetComponent<Text>().text = "player 1 wins";
             gameOver = true; 
 
-        }
+        } 
 
         if (player2.GetComponent<FollowThePath>().waypointIndex ==
             player2.GetComponent<FollowThePath>().waypoints.Length)
