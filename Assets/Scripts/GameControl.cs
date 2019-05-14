@@ -4,7 +4,7 @@ using UnityEngine.UI;
 using UnityEngine;
 using UnityEngine.Analytics;
 
-public class GameControl : MonoBehaviour
+public class GameControl : MonoBehaviour    
 {
     public static GameObject whoWinsTextShadow, player1MoveText, player2MoveText;
     public static GameObject player1, player2;
@@ -37,7 +37,7 @@ public class GameControl : MonoBehaviour
     }
 
     // Update is called once per frame
-    private void Update()
+    public void Update()
     {
         if (player1.GetComponent<FollowThePath>().waypointIndex >
             player1StartWaypoint + DicesideThrown)
@@ -64,20 +64,20 @@ public class GameControl : MonoBehaviour
             player1MoveText.gameObject.SetActive(false);
             player2MoveText.gameObject.SetActive(false);
             whoWinsTextShadow.GetComponent<Text>().text = "player 2 wins";
-            gameOver = true; 
-            
+            gameOver = true;
         }
     }
 
     public static void MovePlayer(int playerToMove)
     {
-        if (playerToMove != 1)
+        switch (playerToMove)
         {
-            if (playerToMove == 2) player2.GetComponent<FollowThePath>().moveAllowed = true;
-        }
-        else
-        {
-            player1.GetComponent<FollowThePath>().moveAllowed = true;
+            case 1:
+                player1.GetComponent<FollowThePath>().moveAllowed = true;
+                break;
+            case 2:
+                player2.GetComponent<FollowThePath>().moveAllowed = true;
+                break;
         }
     }
     }
