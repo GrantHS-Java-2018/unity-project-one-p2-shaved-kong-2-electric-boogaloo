@@ -474,7 +474,7 @@ MonoBehaviour:
   - {fileID: 1124261143}
   - {fileID: 1359330277}
   - {fileID: 173732126}
-  moveSpeed: 5
+  moveSpeed: 1
   waypointIndex: 0
   moveAllowed: 1
 --- !u!1 &220144983
