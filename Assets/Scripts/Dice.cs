@@ -35,7 +35,7 @@ public class Dice : MonoBehaviour
             yield return new WaitForSeconds(0.05f);
         }
 
-        GameControl.DicesideThrown = randomDiceSides + 1;
+        GameControl.diceSideThrown = randomDiceSides + 1;
         if (_whosTurn == 1)
         {
             GameControl.MovePlayer(1);

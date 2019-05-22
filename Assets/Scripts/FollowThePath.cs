@@ -1,28 +1,29 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+//real
 public class FollowThePath : MonoBehaviour
 {
 
     public Transform[] waypoints;
 
-    [SerializeField] private float moveSpeed = 1f;
+    [SerializeField]
+    private float moveSpeed = 1f;
 
-    [HideInInspector] public int waypointIndex = 0;
+    [HideInInspector]
+    public int waypointIndex = 0;
+
     public bool moveAllowed = false;
-    
-    
-    // Start is called before the first frame update
-    private void Start()
-    {
+
+    // Use this for initialization
+    private void Start () {
         transform.position = waypoints[waypointIndex].transform.position;
     }
- 
+	
     // Update is called once per frame
-    private void Update()
-    {
-        if (moveAllowed) Move();
+    private void Update () {
+        if (moveAllowed)
+            Move();
     }
 
     private void Move()
@@ -38,6 +39,5 @@ public class FollowThePath : MonoBehaviour
                 waypointIndex += 1;
             }
         }
-
     }
 }
