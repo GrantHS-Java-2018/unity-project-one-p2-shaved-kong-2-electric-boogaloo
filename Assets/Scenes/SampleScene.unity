@@ -475,9 +475,9 @@ MonoBehaviour:
   - {fileID: 1124261143}
   - {fileID: 1359330277}
   - {fileID: 173732126}
-  moveSpeed: 1
+  moveSpeed: 5
   waypointIndex: 0
-  moveAllowed: 1
+  moveAllowed: 0
 --- !u!114 &214705781
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -490,7 +490,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: abd98456e21ac09449f34a38f43f7d52, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  money: 0
 --- !u!1 &220144983
 GameObject:
   m_ObjectHideFlags: 0
@@ -1641,7 +1640,7 @@ MonoBehaviour:
   - {fileID: 173732126}
   moveSpeed: 5
   waypointIndex: 0
-  moveAllowed: 1
+  moveAllowed: 0
 --- !u!212 &1417917343
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1702,7 +1701,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: abd98456e21ac09449f34a38f43f7d52, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  money: 0
 --- !u!1 &1456406158
 GameObject:
   m_ObjectHideFlags: 0
