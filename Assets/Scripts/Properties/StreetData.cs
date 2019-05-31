@@ -13,7 +13,7 @@ public class StreetData : MonoBehaviour
     private void InitializeStreetData() {
         streetData = new object[,] {
             { "Go", StreetType.GO, null, null, null, null, null, null, null, null },
-            { "Medeterranean Avenue", StreetType.NORMAL, streetManager.brownGroup, 60, 30, 10, 30, 90, 160, 250 },
+            { "Mediterranean Avenue", StreetType.NORMAL, streetManager.brownGroup, 60, 30, 10, 30, 90, 160, 250 },
             { "Community Chest", StreetType.COMMUNITY_CHEST, null, null, null, null, null, null, null, null },
             { "Baltic Avenue", StreetType.NORMAL, streetManager.brownGroup, 60, 30, 20, 60, 180, 320, 450 },
             { "Income Tax", StreetType.INCOME_TAX, null, null, null, null, null, null, null, null },

@@ -2,12 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Street : MonoBehaviour
+public class Player : MonoBehaviour
 {
-    public StreetType type;
+    public Tile currentTile;
+    
+    
     void Start()
     {
-        
+        int playerMoney = 1500;
     }
 
 }

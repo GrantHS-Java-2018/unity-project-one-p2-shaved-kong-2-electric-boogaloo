@@ -8,7 +8,7 @@ public class Streets : MonoBehaviour
     
 }
 
-public enum StreetType{
+/*public enum StreetType{
     
     NORMAL,
     GO,
@@ -23,4 +23,4 @@ public enum StreetType{
     LUXURY_TAX,
     FREE_PARKING
   
-}
+}*/

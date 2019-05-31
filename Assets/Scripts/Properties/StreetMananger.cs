@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class StreetMananger : MonoBehaviour
+/*public class StreetMananger : MonoBehaviour
 {
    
     public StreetGroup brownGroup = new StreetGroup();
@@ -19,3 +19,4 @@ public class StreetMananger : MonoBehaviour
         
     }
 }
+*/

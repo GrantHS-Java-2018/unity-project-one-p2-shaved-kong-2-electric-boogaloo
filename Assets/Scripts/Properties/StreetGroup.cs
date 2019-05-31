@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+/*
 public class StreetGroup : MonoBehaviour
 {
 
@@ -15,3 +15,4 @@ public class StreetGroup : MonoBehaviour
         
     }
 }
+*/
