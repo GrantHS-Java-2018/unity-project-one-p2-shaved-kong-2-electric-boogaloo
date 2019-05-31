@@ -16,11 +16,14 @@ public class FollowThePath : MonoBehaviour
     public bool moveAllowed = false;
 
     // Use this for initialization
+    
+   //This code sets up our waypoint index that was utilized in game control. Follow the path is teh path of waypoints hidden on our game board and is the key function for player movement
     private void Start () {
         transform.position = waypoints[waypointIndex].transform.position;
     }
 	
     // Update is called once per frame
+    //Also contributes to player movement by allowing the movement 
     private void Update () {
         if (moveAllowed)
             Move();
