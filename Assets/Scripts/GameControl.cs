@@ -39,7 +39,7 @@ public class GameControl : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    { //waypoints allow movement, this code tells the player to "follow the path" of the waypoints when they get a value from the dice. This starts their movement.(code for player 1 and 2)
+    { //This code tricks the game loop into not stopping at go, it allows the game to contiuosly run 
         if (player1StartWaypoint + diceSideThrown > 39)
         {
             player1StartWaypoint = player1StartWaypoint - 39;
