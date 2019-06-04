@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+//set a value for player money
 public class PlayerMoney : MonoBehaviour
 {
 

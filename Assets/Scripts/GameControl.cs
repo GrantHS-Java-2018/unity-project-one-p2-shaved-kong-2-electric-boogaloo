@@ -80,7 +80,7 @@ public class GameControl : MonoBehaviour
            //Player 2 movement speed
             player2.GetComponent<FollowThePath>().waypointIndex %= 40;
         }
-        //These two if statements end the game when a player runs out of money, it then brings up the who wins screen. The who wins locks the game and states who won. 
+        //Sets win condition, if player1 has no money player2 wins
         if (player1.GetComponent<PlayerMoney>().money <= 0)
         {
             whoWinsTextShadow.gameObject.SetActive(true);
@@ -89,7 +89,7 @@ public class GameControl : MonoBehaviour
             whoWinsTextShadow.GetComponent<Text>().text = "Player 2 Wins";
             gameOver = true;
         }
-
+        //Sets win condition, if player2 has no money player1 wins
         if (player2.GetComponent<PlayerMoney>().money <= 0)
         {
             whoWinsTextShadow.gameObject.SetActive(true);
