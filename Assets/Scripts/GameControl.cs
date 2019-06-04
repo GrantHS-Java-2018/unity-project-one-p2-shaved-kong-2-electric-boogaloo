@@ -21,7 +21,7 @@ public class GameControl : MonoBehaviour
     {
         /*The who wins text shadow is for the end of the game and declares a winner. It is hidden until the end of the game is reached
         the move text also contributes to moving by setting a players move status to active or inactive */
-//Starts the game, sets up whose turn it is etc 
+//Starts the game, sets up objects that determine whose turn it is etc 
         whoWinsTextShadow = GameObject.Find("WhoWinsText");
         player1MoveText = GameObject.Find("Player1MoveText");
         player2MoveText = GameObject.Find("Player2MoveText");
@@ -39,7 +39,7 @@ public class GameControl : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    { //waypoints allow movement, this code tells the player to "follow the path" of the waypoints when they get a value from the dice. (code for player 1 and 2)
+    { //waypoints allow movement, this code tells the player to "follow the path" of the waypoints when they get a value from the dice. This starts their movement.(code for player 1 and 2)
         if (player1StartWaypoint + diceSideThrown > 39)
         {
             player1StartWaypoint = player1StartWaypoint - 39;
@@ -49,7 +49,7 @@ public class GameControl : MonoBehaviour
         {
             player2StartWaypoint = player2StartWaypoint - 39;
         }
-
+        //These two if statements change the components which allows turns to switch and the game to end. They're instructed by the switch case statement at the bottom.
         if (player1.GetComponent<FollowThePath>().waypointIndex == player1StartWaypoint + diceSideThrown)
         {
             player1.GetComponent<FollowThePath>().moveAllowed = false;
@@ -66,19 +66,21 @@ public class GameControl : MonoBehaviour
             player2StartWaypoint = player2.GetComponent<FollowThePath>().waypointIndex;
         }
 
-
+        //allows player1 to follow the waypoint path
         if (player1.GetComponent<FollowThePath>().waypointIndex >
             player1.GetComponent<FollowThePath>().waypoints.Length - 1)
         {
+           //Sets movement speed for player 1
             player1.GetComponent<FollowThePath>().waypointIndex %= 40;
         }
-
+        //Allows player 2 to follow the waypoint path 
         if (player2.GetComponent<FollowThePath>().waypointIndex >
             player2.GetComponent<FollowThePath>().waypoints.Length - 1)
         {
+           //Player 2 movement speed
             player2.GetComponent<FollowThePath>().waypointIndex %= 40;
         }
-
+        //These two if statements end the game when a player runs out of money, it then brings up the who wins screen. The who wins locks the game and states who won. 
         if (player1.GetComponent<PlayerMoney>().money <= 0)
         {
             whoWinsTextShadow.gameObject.SetActive(true);

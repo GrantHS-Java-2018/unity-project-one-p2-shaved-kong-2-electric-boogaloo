@@ -23,8 +23,8 @@ public class Dice : MonoBehaviour
              StartCoroutine("RollTheDice");
     }
 
-    //This segment rolls our dice in unity, it generates a random number ranged 1-6 and then moves the player said value. 
-    // It also changes whose turn it is
+    /*This segment rolls our dice in unity, it generates a random number ranged 1-6 and then moves the player said value. 
+     It also changes whose turn it is */
     private IEnumerator RollTheDice()
     {
         _coroutineAllowed = false;

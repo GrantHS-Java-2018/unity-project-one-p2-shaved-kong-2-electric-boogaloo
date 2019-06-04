@@ -22,14 +22,16 @@ public class FollowThePath : MonoBehaviour
         transform.position = waypoints[waypointIndex].transform.position;
     }
 	
-    // Update is called once per frame
-    //Also contributes to player movement by allowing the movement 
+    /* Update is called once per frame
+    Also contributes to player movement by allowing the movement */
     private void Update () {
         if (moveAllowed)
             Move();
     }
 
     private void Move()
+    
+    //Class name sums it up as well as the code language. This code actually moves the player 
     {
         if (waypointIndex <= waypoints.Length - 1)
         {
