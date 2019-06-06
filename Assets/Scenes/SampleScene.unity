@@ -353,6 +353,7 @@ GameObject:
   - component: {fileID: 214705779}
   - component: {fileID: 214705780}
   - component: {fileID: 214705781}
+  - component: {fileID: 214705782}
   m_Layer: 0
   m_Name: Player2
   m_TagString: Untagged
@@ -488,6 +489,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: abd98456e21ac09449f34a38f43f7d52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentTile: {fileID: 0}
+--- !u!114 &214705782
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 214705777}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 640fc5df6e7319a4ab418afae6f7193a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   money: 1500
@@ -1565,6 +1579,7 @@ GameObject:
   - component: {fileID: 1417917343}
   - component: {fileID: 1417917342}
   - component: {fileID: 1417917344}
+  - component: {fileID: 1417917345}
   m_Layer: 0
   m_Name: Player1
   m_TagString: Untagged
@@ -1702,6 +1717,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: abd98456e21ac09449f34a38f43f7d52, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentTile: {fileID: 0}
+--- !u!114 &1417917345
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1417917340}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 640fc5df6e7319a4ab418afae6f7193a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
   money: 1500
 --- !u!1 &1456406158
 GameObject:
@@ -1796,7 +1824,7 @@ PrefabInstance:
     - target: {fileID: 5081411418787772344, guid: ea4deaf228da9304ba337374f66c0205,
         type: 3}
       propertyPath: m_RootOrder
-      value: 9
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 5081411418787772344, guid: ea4deaf228da9304ba337374f66c0205,
         type: 3}
