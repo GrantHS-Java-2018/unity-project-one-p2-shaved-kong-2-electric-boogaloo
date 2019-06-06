@@ -1,15 +1,25 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEditorInternal.Profiling.Memory.Experimental;
 using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    public Tile currentTile;
+    private static GameObject player1, player2;
+    
+    
+    public int p1CurrentTile = player1.GetComponent<Tile>().p1Tile;
+    public int p2CurrentTile = player2.GetComponent<Tile>().p2Tile;
     
     
     void Start()
     {
-        int playerMoney = 1500;
+        player1 = GameObject.Find("Player1");
+        player2 = GameObject.Find("Player2"); 
     }
 
+    private void Update()
+    {
+        
+    }
 }

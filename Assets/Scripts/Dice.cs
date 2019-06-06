@@ -7,6 +7,8 @@ public class Dice : MonoBehaviour
     public SpriteRenderer _rend;
     public int _whosTurn = 1;
     public bool _coroutineAllowed = true;
+    public int p1TotalTile = 0;
+    public int p2TotalTile = 0;
     
 
     // Start is called before the first frame update
@@ -20,11 +22,11 @@ public class Dice : MonoBehaviour
     private void OnMouseDown()
     {
         if(!GameControl.gameOver && _coroutineAllowed)
-             StartCoroutine("RollTheDice");
+            StartCoroutine("RollTheDice");
     }
 
-    /*This segment rolls our dice in unity, it generates a random number ranged 1-6 and then moves the player said value. 
-     It also changes whose turn it is */
+    //This segment rolls our dice in unity, it generates a random number ranged 1-6 and then moves the player said value. 
+    // It also changes whose turn it is
     private IEnumerator RollTheDice()
     {
         _coroutineAllowed = false;
@@ -41,9 +43,17 @@ public class Dice : MonoBehaviour
         if (_whosTurn == 1)
         {
             GameControl.MovePlayer(1);
+            
+            p1TotalTile += randomDiceSides;
+            if (p1TotalTile > 39) p1TotalTile -= 40;
+
         } else if (_whosTurn == -1)
         {
             GameControl.MovePlayer(2);
+            
+            p2TotalTile += randomDiceSides;
+            if (p2TotalTile > 39) p2TotalTile -= 40;
+
         }
         
         _whosTurn *= -1;
