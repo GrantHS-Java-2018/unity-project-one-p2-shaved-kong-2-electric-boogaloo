@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class TestEffect : TileEffect
 {
+    //none of my shit works at all because I don't know what I'm doing
+    
     private static GameObject player1, player2;
     
     public override EffectType effect {
@@ -19,10 +21,8 @@ public class TestEffect : TileEffect
         player2 = GameObject.Find("Player2"); 
     }
 
-    // Update is called once per frame
-    void Update()
+    void Effect()
     {
-
         {
             if (tile.player1Land == true)
             {
@@ -34,5 +34,11 @@ public class TestEffect : TileEffect
                 player2.GetComponent<PlayerMoney>().money -= 1500;
             }
         }
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        Effect();
     }
 }

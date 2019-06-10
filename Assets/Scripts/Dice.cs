@@ -59,4 +59,13 @@ public class Dice : MonoBehaviour
         _whosTurn *= -1;
         _coroutineAllowed = true;
     }
+    
+    public int GetP1Tile()
+    {
+        return p1TotalTile;
+    }
+    public int GetP2Tile()
+    {
+        return p2TotalTile;
+    }
 }
