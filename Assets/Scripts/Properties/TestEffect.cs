@@ -17,21 +17,29 @@ public class TestEffect : TileEffect
 
     void Start()
     {
+        //I have no idea how gameobjects work
+        
         player1 = GameObject.Find("Player1");
         player2 = GameObject.Find("Player2"); 
     }
 
+    //Supposed to remove money from the player that lands on the tile,
+    //then give that money to the player who didn't.  Doesn't work because
+    //the if statements cant become true
     void Effect()
     {
         {
-            if (tile.player1Land == true)
+             
+            if (tile.GetP1Land())
             {
-                player1.GetComponent<PlayerMoney>().money -= 1500;
+                player1.GetComponent<PlayerMoney>().money -= 200;
+                player2.GetComponent<PlayerMoney>().money += 200;
             }
             
-            if (tile.player2Land == true)
+            if (tile.GetP2Land())
             {
-                player2.GetComponent<PlayerMoney>().money -= 1500;
+                player2.GetComponent<PlayerMoney>().money -= 200;
+                player1.GetComponent<PlayerMoney>().money += 200;
             }
         }
     }

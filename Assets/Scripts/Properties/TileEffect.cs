@@ -6,6 +6,8 @@ using UnityEngine.EventSystems;
 public abstract class TileEffect : MonoBehaviour
 {
     
+    //Had we gotten to properties this would have been used for all of the different
+    //types of effects.
     public enum EffectType{
     
         NORMAL,
@@ -24,6 +26,7 @@ public abstract class TileEffect : MonoBehaviour
   
     }
     
+    //Returns tile that the effect is attached to, but I don't even know if it works.
     Tile _tile;
     public Tile tile {
         get {

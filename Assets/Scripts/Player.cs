@@ -10,8 +10,8 @@ public class Player : MonoBehaviour
     private static GameObject player1, player2;
 
 
-    public int p1CurrentTile = player1.GetComponent<Tile>().p1Tile;
-    public int p2CurrentTile = player2.GetComponent<Tile>().p2Tile;
+    public int p1CurrentTile = 0;
+    public int p2CurrentTile = 0;
 
 
     void Start()
@@ -22,6 +22,7 @@ public class Player : MonoBehaviour
 
     private void Update()
     {
-
+        p1CurrentTile = player1.GetComponent<Dice>().GetP1Tile();
+        p2CurrentTile = player2.GetComponent<Dice>().GetP2Tile();
     }
 }
